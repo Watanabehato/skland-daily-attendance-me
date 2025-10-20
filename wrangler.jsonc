@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "skland-daily-attendance-me",
+  "compatibility_date": "2025-04-04",
+  "main": "./src/worker.ts",
+  "observability": {
+    "enabled": true
+  },
+  "triggers": {
+    "crons": [
+      "30 0/2 * * *"
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SKLAND_DAILY_ATTENDANCE_STORAGE",
+      "id": "26dc9ff0b03b42feb4ec27aae006749c"
+    }
+  ]
+}
